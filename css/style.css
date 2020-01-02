@@ -1,36 +1,78 @@
+:root {
+  --gray: #808080;
+  --red: #ff0000;
+  --teal: #008080;
+  --white: #ffffff;
+}
+
 body {
-  font: 16px/1.5 Courier, monospace;
   margin: 0;
+  padding: 1rem;
 }
 
 main {
-  width: 80%;
+  font-family: sans-serif;
   margin: 0 auto;
+  max-width: 600px;
+}
+
+form {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  margin: 1rem 0;
 }
 
-.browse {
-  padding: 10px 25px;
-}
-
-a {
-  color: #c00;
+img {
+  display: block;
+  margin: 1rem auto;
+  width: 100%;
 }
 
 input {
-  width: 20em;
+  border: 1px solid var(--teal);
+  font-size: 1.15rem;
+  padding: 0.5rem 0.75rem;
 }
 
-input[type="search"] {
-  font-size: 200%;
-  margin: 1em;
+input:focus,
+select:focus {
+  box-shadow: 0px 0px 3px var(--teal);
+  outline: none;
+}
+
+input[type='search'] {
+  flex-grow: 1;
+  width: 100%;
+}
+
+input[type='submit'] {
+  background-color: var(--teal);
+  color: var(--white);
+  flex-grow: 0;
+  font-size: 1rem;
+  text-transform: uppercase;
 }
 
 select {
-  font-size: 150%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: var(--white);
+  background-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1"><path fill="teal" d="M4 8L0 4h8z"/></svg>');
+  background-position: right 50%;
+  background-repeat: no-repeat;
+  border: 1px solid var(--teal);
+  border-radius: 0;
+  color: var(--gray);
+  display: none;
+  font-size: 1.15rem;
+  padding: 0.5rem 1.5rem 0.5rem 0.75rem;
+  width: 100%;
 }
+
 .fail {
-  color: red;
+  color: var(--red);
+  text-align: center;
+}
+
+.logo {
+  max-width: 300px;
 }
