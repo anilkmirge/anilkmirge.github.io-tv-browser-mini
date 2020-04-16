@@ -1,5 +1,5 @@
 // API Docs at:
-// http://www.tvmaze.com/api
+// https://www.tvmaze.com/api
 const form = document.getElementById('search');
 form.addEventListener('submit', function (event) {
 	event.preventDefault();
@@ -8,7 +8,7 @@ form.addEventListener('submit', function (event) {
 	let title = document.getElementById('show-search').value;
 	let showDetail = document.getElementById('show-detail');
 	showDetail.innerHTML = '';
-	const url = `http://api.tvmaze.com/search/shows?q=${title}`;
+	const url = `https://api.tvmaze.com/search/shows?q=${title}`;
 
 	fetch(url)
 		.then((res) => {
@@ -35,7 +35,7 @@ form.addEventListener('submit', function (event) {
 		event.preventDefault();
 		showDetail.innerHTML = '';
 		let showId = event.target.value;
-		const showUrl = `http://api.tvmaze.com/shows/${showId}`;
+		const showUrl = `https://api.tvmaze.com/shows/${showId}`;
 		fetch(showUrl)
 			.then((res) => {
 				return res.json();
